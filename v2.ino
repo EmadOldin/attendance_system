@@ -11,8 +11,6 @@ const String PHONE = "+989123333333";  //edit
 #define RST_PIN 22
 #define SS_PIN 21
 HardwareSerial sim800(1);
-// #define RELAY_1 17
-// #define RELAY_2 2
 
 unsigned long start_H = 0;
 unsigned long stop_H = 0;
@@ -23,12 +21,8 @@ unsigned long stop_E = 0;
 unsigned long start_Y = 0;
 unsigned long stop_Y = 0;
 
-
-
-
 String smsStatus, senderNumber, receivedDate, msg;
 boolean isReply = false;
-
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);
 String Hossein = ("72 71 88 51");  //edit
@@ -50,7 +44,6 @@ AdafruitIO_Feed *hossein = io.feed("Hossein");  //edit
 AdafruitIO_Feed *amin = io.feed("Amin");        //edit
 AdafruitIO_Feed *ehsan = io.feed("Ehsan");      //edit
 AdafruitIO_Feed *younes = io.feed("Younes");    //edit
-
 
 void setup() {
 
@@ -79,8 +72,6 @@ void setup() {
   }
   Serial.println(io.statusText());
 }
-
-
 void loop() {
   //////////////////////////////////////////////////
   while (sim800.available()) {
@@ -91,8 +82,6 @@ void loop() {
     sim800.println(Serial.readString());
   }
   //////////////////////////////////////////////////
-
-
   io.run();
 
   if (mfrc522.PICC_IsNewCardPresent() && mfrc522.PICC_ReadCardSerial()) {
@@ -111,10 +100,7 @@ void loop() {
     content.toUpperCase();
     Serial.println(content.substring(1));
     user = content.substring(1);
-
-
     // edit this part
-
     // for Hossein
     if (user == Hossein) {
       if (hozor_H == 0) {
@@ -190,14 +176,11 @@ void loop() {
     }
   }
   delay(1000);
-
-
 }  //main loop ends
 
 //***************************************************
 void parseData(String buff) {
   Serial.println(buff);
-
   unsigned int len, index;
   //////////////////////////////////////////////////
   //Remove sent "AT Command" from the response string.
@@ -205,15 +188,12 @@ void parseData(String buff) {
   buff.remove(0, index + 2);
   buff.trim();
   //////////////////////////////////////////////////
-
   //////////////////////////////////////////////////
   if (buff != "OK") {
     index = buff.indexOf(":");
     String cmd = buff.substring(0, index);
     cmd.trim();
-
     buff.remove(0, index + 2);
-
     if (cmd == "+CMTI") {
       //get newly arrived memory location and store it in temp
       index = buff.indexOf(",");
@@ -223,8 +203,6 @@ void parseData(String buff) {
       sim800.println(temp);
     } else if (cmd == "+CMGR") {
       extractSms(buff);
-
-
       if (senderNumber == PHONE) {
         doAction();
       }
@@ -234,7 +212,6 @@ void parseData(String buff) {
     //The result of AT Command is "OK"
   }
 }
-
 //************************************************************
 void extractSms(String buff) {
   unsigned int index;
@@ -257,7 +234,6 @@ void extractSms(String buff) {
   buff = "";
   msg.toLowerCase();
 }
-
 void doAction() {
   // for Hossein
   if (hozor_H == 1) {
@@ -270,7 +246,6 @@ void doAction() {
   receivedDate = "";
   msg = "";
 }
-
 void doAction_H() {
   // for Hossein
   if (hozor_H == 1) {
@@ -278,15 +253,11 @@ void doAction_H() {
   } else if (hozor_H == 0) {
     Reply("H out");
   }
-
-
   smsStatus = "";
   senderNumber = "";
   receivedDate = "";
   msg = "";
 }
-
-
 void doAction_A() {
   // for Amin
   if (hozor_A == 1) {
@@ -294,15 +265,11 @@ void doAction_A() {
   } else if (hozor_A == 0) {
     Reply("A out");
   }
-
-
   smsStatus = "";
   senderNumber = "";
   receivedDate = "";
   msg = "";
 }
-
-
 void doAction_E() {
   // for Ehsan
   if (hozor_E == 1) {
@@ -310,16 +277,11 @@ void doAction_E() {
   } else if (hozor_E == 0) {
     Reply("E out");
   }
-
-
   smsStatus = "";
   senderNumber = "";
   receivedDate = "";
   msg = "";
 }
-
-
-
 void doAction_Y() {
   // for Younes
   if (hozor_Y == 1) {
@@ -327,18 +289,11 @@ void doAction_Y() {
   } else if (hozor_Y == 0) {
     Reply("Y out");
   }
-
-
   smsStatus = "";
   senderNumber = "";
   receivedDate = "";
   msg = "";
 }
-
-
-
-
-
 void Reply(String text) {
   sim800.print("AT+CMGF=1\r");
   delay(1000);
