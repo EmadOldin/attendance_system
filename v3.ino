@@ -30,17 +30,18 @@ AdafruitIO_Feed *hossein = io.feed("Hossein");  //edit
 AdafruitIO_Feed *amin = io.feed("Amin");        //edit
 AdafruitIO_Feed *ehsan = io.feed("Ehsan");      //edit
 AdafruitIO_Feed *younes = io.feed("Younes");    //edit
-
-
+////////////////////////////////////////////////////////////////////////////
 char usernameArr[] = "Hossein";  // Character array for username
 char idArr[] = "72 71 88 51";    // Character array for ID
 Person Hossein(usernameArr, idArr, 0, 0, 0);
 
 
+// Person Hossein("Hossein", "72 71 88 51", 0, 0, 0);
+// Person Amin("Amin", "5D D2 FD A9", 0, 0, 0);
+// Person Ehsan("Ehsan", "E9 89 5F B3", 0, 0, 0);
+// Person Younes("Younes", "79 55 63 B3", 0, 0, 0);
+////////////////////////////////////////////////////////////////////////////
 void setup() {
-
-
-
   Serial.begin(9600);
   Serial.println("esp32 serial initialize");
   sim800.begin(BAUD_RATE, SERIAL_8N1, rxPin, txPin);
@@ -95,12 +96,7 @@ void loop() {
     Serial.println(content.substring(1));
     user = content.substring(1);
 
-    // Person Hossein("Hossein", "72 71 88 51", 0, 0, 0);
-    // Person Amin("Amin", "5D D2 FD A9", 0, 0, 0);
-    // Person Ehsan("Ehsan", "E9 89 5F B3", 0, 0, 0);
-    // Person Younes("Younes", "79 55 63 B3", 0, 0, 0);
-
-
+    ////////////////////////////////////////////////////////////////////////////
     // for Hossein
     if (user == Hossein.id) {
       if (Hossein.hozor == 0) {
@@ -167,7 +163,7 @@ void parseData(String buff) {
   }
 }
 
-//************************************************************
+////////////////////////////////////////////////////////////////////////////
 void extractSms(String buff) {
   unsigned int index;
 
@@ -189,9 +185,9 @@ void extractSms(String buff) {
   buff = "";
   msg.toLowerCase();
 }
-
+////////////////////////////////////////////////////////////////////////////
 void doAction() {
-  // for Hossein
+  // just for Hossein
   if (Hossein.hozor == 1) {
     Reply("H in");
   } else if (Hossein.hozor == 0) {
@@ -202,7 +198,6 @@ void doAction() {
   receivedDate = "";
   msg = "";
 }
-
 
 void Reply(String text) {
   sim800.print("AT+CMGF=1\r");
