@@ -1,7 +1,7 @@
 #define IO_USERNAME "EmadOldin"                    //edit
 #define IO_KEY "aio_dVxi54lS99mox8HO5lsHa9RRgOry"  //edit
-#define WIFI_SSID "Galaxy A20s1546"                //edit
-#define WIFI_PASS "xpuw1840"                       //edit
+#define WIFI_SSID "ssid"                //edit
+#define WIFI_PASS "mmmmmmm"                       //edit
 
 #include "AdafruitIO_WiFi.h"
 
