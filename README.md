@@ -67,10 +67,9 @@
 
 ### **سورس کد های پروژه:**
 
-[نسخه 1 پروژه](https://github.com/EmadOldin/attendance_system/blob/main/v1/v1.ino) </br>
-[نسخه 2 پروژه](https://github.com/EmadOldin/attendance_system/blob/main/v2/v2.ino) </br>
-[نسخه 3 پروژه](https://github.com/EmadOldin/attendance_system/blob/main/v3/v3.ino) </br>
-[نسخه نهایی پروژه روی ESP32](https://github.com/EmadOldin/attendance_system/blob/main/v2/v2.ino) </br>
+- [ ] [نسخه 1 پروژه](https://github.com/EmadOldin/attendance_system/blob/main/v1/v1.ino) </br>
+- [x] [نسخه 2 پروژه](https://github.com/EmadOldin/attendance_system/blob/main/v2/v2.ino) </br>
+- [ ] [نسخه 3 پروژه](https://github.com/EmadOldin/attendance_system/blob/main/v3/v3.ino) </br>
 
 
 
@@ -88,10 +87,19 @@
 اگر بخوهیم از آدافروت استفاده نکنیم و به جاش از سایت شخصی خودمان استفاده کنیم، Backend و Frontend به چه شکل است؟ و همچنین میکروکنترلر ESP32 چه نقشی را ایفا می کند؟
 
 
+##  منابع مورد استفاده در این پروژه :
+1. سایت آیرنکس
+2. چت بات Gemini
+3. سایت Stack Over Flow
 
 
 
 
+
+
+
+
+---
 - [x] عنوان پروژه
 - [x] اسم محقق
 - [x] برنامه نویسان
