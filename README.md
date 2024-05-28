@@ -74,9 +74,18 @@
 
 
 
+---
+## عکس داشبور Adafruit و نمونه پیامک های ارسال شده توسط سیستم
+![alt - Github](https://github.com/EmadOldin/attendance_system/blob/main/picture/Screenshot%202024-05-16%20182150.png)
+![alt - Github](https://github.com/EmadOldin/attendance_system/blob/main/picture/Screenshot%202024-05-16%20182308.png)
+![alt - Github](https://github.com/EmadOldin/attendance_system/blob/main/picture/Screenshot%202024-05-29%20001409.png)
 
-
-
+---
+## سوالاتی که در طول برایم ایجاد شد :
+چگونه ساختار فعلی(در ورژن 2) را تبدیل به یک ساختار شی گرا بکنیم؟
+چگونه در پروژه، حضور شخص را با بوق هم مشخص کنیم؟ با استفاده از بازر(در اینجا با انواع بازر ها : 1. پسیو و 2. اکتیو آشنا شدم)
+اگر بخواهیم ساختار پروژه رو به دیتابیس وصل کنیم، چگونه می شود؟
+اگر بخوهیم از آدافروت استفاده نکنیم و به جاش از سایت شخصی خودمان استفاده کنیم، Backend و Frontend به چه شکل است؟ و همچنین میکروکنترلر ESP32 چه نقشی را ایفا می کند؟
 
 
 
