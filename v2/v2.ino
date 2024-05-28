@@ -125,7 +125,7 @@ void loop() {
         hozor_H = 0;
         stop_H = millis();
         doAction_H();
-        Final_H->save(stop_H - start_H);
+        Final_H->save((stop_H - start_H) / 1000); // convert millisecond to second
       }
     }  // for Amin
     else if (user == Amin) {
@@ -143,7 +143,7 @@ void loop() {
         hozor_A = 0;
         stop_A = millis();
         doAction_A();
-        Final_A->save(stop_A - start_A);
+        Final_A->save((stop_A - start_A) / 1000); // convert millisecond to second
       }
     }  // for Ehsan
     else if (user == Ehsan) {
@@ -161,7 +161,7 @@ void loop() {
         hozor_E = 0;
         stop_E = millis();
         doAction_E();
-        Final_E->save(stop_E - start_E);
+        Final_E->save((stop_E - start_E) / 1000); // convert millisecond to second
       }
     }  // for Younes
     else if (user == Younes) {
@@ -179,13 +179,11 @@ void loop() {
         hozor_Y = 0;
         stop_Y = millis();
         doAction_Y();
-        Final_Y->save(stop_Y - start_Y);
+        Final_Y->save((stop_Y - start_Y) / 1000); // convert millisecond to second
       }
     }
   }
   delay(1000);
-
-
 }  //main loop ends
 
 //***************************************************
