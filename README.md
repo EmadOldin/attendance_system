@@ -78,7 +78,7 @@
 ![alt - Github](https://github.com/EmadOldin/attendance_system/blob/main/picture/Screenshot%202024-05-16%20182150.png)
 ![alt - Github](https://github.com/EmadOldin/attendance_system/blob/main/picture/Screenshot%202024-05-16%20182308.png)
 ![alt - Github](https://github.com/EmadOldin/attendance_system/blob/main/picture/Screenshot%202024-05-29%20001409.png)
-
+![alt - Github](https://github.com/EmadOldin/attendance_system/blob/main/picture/Screenshot_%DB%B2%DB%B0%DB%B2%DB%B4%DB%B0%DB%B5%DB%B2%DB%B9-%DB%B0%DB%B9%DB%B0%DB%B4%DB%B0%DB%B7_Messages.jpg)
 ---
 ## سوالاتی که در طول برایم ایجاد شد :
 چگونه ساختار فعلی(در ورژن 2) را تبدیل به یک ساختار شی گرا بکنیم؟ </br>
