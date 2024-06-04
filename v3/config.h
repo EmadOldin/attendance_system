@@ -1,5 +1,5 @@
 #define IO_USERNAME "EmadOldin"                    //edit
-#define IO_KEY "aio_dVxi54lS99mox8HO5lsHa9RRgOry"  //edit
+#define IO_KEY "aio_dfffffffffffffffffdfffffffff"  //edit
 #define WIFI_SSID "ssid"                           //edit
 #define WIFI_PASS "password"                       //edit
 
