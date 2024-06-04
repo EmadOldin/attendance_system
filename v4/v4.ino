@@ -4,7 +4,7 @@
 #include <MFRC522.h>
 
 //sender phone number with coATuntry code
-const String PHONE = "+989223769016";  //edit
+const String PHONE = "+983232254554";  //edit
 
 #define rxPin 15
 #define txPin 4
